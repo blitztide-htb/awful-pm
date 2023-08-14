@@ -9,7 +9,7 @@ if(!isset($_SESSION['username'])){
 <!DOCTYPE html>
 <html class="h-100">
     <head>
-        <?php readfile("snippets/header.inc");?>
+        <?php readfile("../snippets/header.inc");?>
         <title> Welcome · TTX</title>
     </head>
     <body class="d-flex flex-column h-100">
