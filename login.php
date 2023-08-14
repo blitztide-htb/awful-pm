@@ -50,7 +50,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
 </div>
 </div>
-<?php readfile("snippets/copyright.inc"); ?>
 </body>
 <?php readfile("snippets/footer.inc"); ?>
 </html>
