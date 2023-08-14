@@ -24,10 +24,9 @@
         </div>
         <div class="container">
             <ul class="nav text-white">
-                <li class="nav-item"> <a class='nav-link' href='./users.php'>Users</a></li>
-                <li class="nav-item"> <a class='nav-link' href='./groups.php'>Groups</a></li>
-                <li class="nav-item"> <a class='nav-link' href='./vpns.php'>VPNs</a></li>
-                <li class="nav-item"> <a class='nav-link' href='./credentials.php'>Credentials</a></li>
+                <?php <?php foreach($response['nav'] as $nav): ?>
+                <li class="nav-item"> <a class='nav-link' href='<?=$nav['url']?>'><?=$nav['text']?></a></li>
+                <?php endforeach;?>
             </ul>
         </div>
     </nav>
