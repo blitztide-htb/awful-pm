@@ -1,6 +1,7 @@
 <?php
 include('../config.php');
 include('./admin-nav.php');
+print_r($response['nav']);
 session_start();
 if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
