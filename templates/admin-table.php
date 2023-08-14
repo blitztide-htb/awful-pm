@@ -7,9 +7,9 @@ include '../templates/header.php';?>
             <div class="table-responsive">
                 <table class="table table-sm">
                     <thead>
-                        <?php foreach($headers as $header) { echo '<th>' . $header . '</th>';} ?>
+                        <?php foreach($response['headers'] as $header) { echo '<th>' . $header . '</th>';} ?>
                     </thead>
-                    <?php foreach($rows as $row): ?>
+                    <?php foreach($response['rows'] as $row): ?>
                     <?php foreach($row as $item): ?>
                     <tr>
                         <td><?=$item?></td>
