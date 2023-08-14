@@ -8,6 +8,9 @@ if(!isset($_SESSION['username'])){
   $query = sprintf("SELECT ovpn_file FROM vpn_users WHERE id='%s'",$_GET['uid']);
   $qresult = $mysqli->query($query);
   $results = mysqli_fetch_row($qresult);
+  if(!$results[0]){
+    die("NOPE");
+  }
   header("Content-Type: text/plain");
   header("Content-Type: application/download");
   header('Content-Disposition: attachment; filename="connection.ovpn"');
