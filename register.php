@@ -3,7 +3,7 @@ include('config.php');
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
     // Check all values exist
-    if(!isset($_POST['username']) OR !isset($_POST['password'])
+    if(!isset($_POST['username']) || !isset($_POST['password'])
     {
         die('Please enter all required information');
     }
