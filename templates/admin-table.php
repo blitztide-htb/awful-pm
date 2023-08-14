@@ -6,15 +6,13 @@ include '../templates/header.php';?>
             <h1> Groups</h1>
             <div class="table-responsive">
                 <table class="table table-sm">
+                    <thead>
+                        <?php foreach($headers as $header) { echo '<th>' . $header . '</th>';} ?>
+                    </thead>
+                    <?php foreach($rows as $row): ?>
+                    <?php foreach($row as $item): ?>
                     <tr>
-                        <th>#</th>
-                        <th>Name</th>
-                        <th>Users</th>
-                    </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>Admin</td>
-                        <td>admin</td>
+                        <td><?=$item?></td>
                     </tr>
                 </table>
             </div>
