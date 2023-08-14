@@ -6,7 +6,6 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
-print_r($response['nav']);
 $response['title'] = 'Users · ADMIN';
 $response['header'] = 'ADMIN Interface';
 $response['user'] = $_SESSION['username'];
