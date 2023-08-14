@@ -10,11 +10,11 @@ include '../templates/header.php';?>
                         <?php foreach($response['headers'] as $header) { echo '<th>' . $header . '</th>';} ?>
                     </thead>
                     <?php foreach($response['rows'] as $row): ?>
-                    <?php foreach($row as $item): ?>
                     <tr>
+                    <?php foreach($row as $item): ?>
                         <td><?=$item?></td>
-                    </tr>
                     <?php endforeach;?>
+                    </tr>
                     <?php endforeach;?>
                 </table>
             </div>
