@@ -9,7 +9,7 @@ if(!isset($_SESSION['username'])){
   $qresult = $mysqli->query($query);
   $results = mysqli_fetch_row($qresult);
   if(!$results[0]){
-    die("NOPE");
+    die("NO VPN FILE FOUND");
   }
   header("Content-Type: text/plain");
   header("Content-Type: application/download");
