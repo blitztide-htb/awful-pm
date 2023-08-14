@@ -26,8 +26,8 @@
             <ul class="nav text-white">
                 <?php foreach($response['nav'] as $nav): ?>
                 <li class="nav-item"> 
-                    <a class='nav-link' href='<?=$nav['url']?>'>
-                    <?=$nav['text']?>
+                    <a class='nav-link' href='<?=$nav['url'];?>'>
+                    <?=$nav['text'];?>
                     </a>
                 </li>
                 <?php endforeach;?>
