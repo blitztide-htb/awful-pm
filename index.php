@@ -8,12 +8,8 @@ if(!isset($_SESSION['email'])){
 <!DOCTYPE html>
 <html class="h-100">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php readfile("snippets/header.inc");?>
         <title> Welcome · TTX</title>
-        <link rel="stylesheet" href="./css/style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
     <body class="d-flex flex-column h-100">
         <nav class="navbar bg-primary sticky-top text-white">
@@ -78,5 +74,5 @@ if(!isset($_SESSION['email'])){
 
         </footer>
     </body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    <?php readfile("snippets/footer.inc"); ?>
 </html>
