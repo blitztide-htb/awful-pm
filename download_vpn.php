@@ -6,6 +6,7 @@ if(!isset($_SESSION['username'])){
 	exit();
 }
   $query = sprintf("SELECT ovpn_file FROM vpn_users WHERE id='%s'",$_GET['uid']);
-  $result = $mysqli->query($query);
-  print($result);
+  $qresult = $mysqli->query($query);
+  $results = mysqli_fetch_all($qresult);
+  print($results);
 ?>
