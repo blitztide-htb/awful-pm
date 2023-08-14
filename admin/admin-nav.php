@@ -1,12 +1,12 @@
 <?php defined('awful-pm') or die();
-$json = <<<JSON
+$json = <<<END
 [
     {
         'url':'test.php',
         'text':'poop'
     }
 ]
-JSON;
+END;
 $response['nav'] = json_decode($json);
 if(!$response['nav']){
     die('Your nav json sucks');:
