@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
-$response['title'] = 'Groups · ADMIN'
+$response['title'] = 'Groups · ADMIN';
 include '../templates/header.template';
 ?>
     <body class="d-flex flex-column h-100">
