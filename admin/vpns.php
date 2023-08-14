@@ -10,14 +10,14 @@ if(!isset($_SESSION['username'])){
 <html class="h-100">
     <head>
         <?php readfile("../snippets/header.inc");?>
-        <title> Welcome · TTX</title>
+        <title> VPNS · ADMIN</title>
     </head>
     <body class="d-flex flex-column h-100">
         <?php readfile("../snippets/admin-nav.inc");?>
         <main class="flex-fill w-75 mx-auto">
             <div class="container mt-5">
                 <div class="card p-5">
-                    <h1> Users</h1>
+                    <h1> VPNs</h1>
                     <div class="table-responsive">
                         <table class="table table-sm">
                             <tr>

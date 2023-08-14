@@ -10,7 +10,7 @@ if(!isset($_SESSION['username'])){
 <html class="h-100">
     <head>
         <?php readfile("../snippets/header.inc");?>
-        <title> Welcome · TTX</title>
+        <title> Users · ADMIN</title>
     </head>
     <body class="d-flex flex-column h-100">
         <?php readfile("../snippets/admin-nav.inc");?>
