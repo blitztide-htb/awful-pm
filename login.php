@@ -46,6 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
   <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
 </form>
+<a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
 </body>
 <?php readfile("snippets/footer.inc"); ?>
 </html>
