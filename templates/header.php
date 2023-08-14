@@ -24,13 +24,15 @@
         </div>
         <div class="container">
             <ul class="nav text-white">
-                <?php foreach($response['nav'] as $nav): ?>
+                <?php foreach($response['nav'] as $nav): echo
+                <<<END
                 <li class="nav-item"> 
-                    <a class='nav-link' href='<?=$nav['url'];?>'>
-                    <?=$nav['text'];?>
+                    <a class='nav-link' href='$nav['url']'>
+                    $nav['text'];
                     </a>
                 </li>
-                <?php endforeach;?>
+                END;
+                endforeach;?>
             </ul>
         </div>
     </nav>
