@@ -1,4 +1,4 @@
-<?php 
+<?php
 include '../templates/header.php';?>
 <main class="flex-fill w-75 mx-auto">
     <div class="container mt-5">
