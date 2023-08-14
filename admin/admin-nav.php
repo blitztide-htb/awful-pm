@@ -16,7 +16,7 @@ $json = <<<END
     {
         "link":"credentials.php",
         "text":"Credentials"
-    },
+    }
 ]
 END;
 $response['nav'] = json_decode($json);
