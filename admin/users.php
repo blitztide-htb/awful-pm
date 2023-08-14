@@ -14,6 +14,6 @@ $response['rows'] = array(array('1','2'),array('3','4'));
 $response['nav'] = array(array(
     'link' => 'test.php',
     'text' => 'TEST',
-))
+));
 include '../templates/admin-table.php';
 ?>
