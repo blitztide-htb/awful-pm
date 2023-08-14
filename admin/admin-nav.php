@@ -2,19 +2,19 @@
 $json = <<<END
 [
     {
-        "link":"users.php",
+        "url":"users.php",
         "text":"Users"
     },
     {
-        "link":"groups.php",
+        "url":"groups.php",
         "text":"Groups"
     },
     {
-        "link":"vpns.php",
+        "url":"vpns.php",
         "text":"VPNs"
     },
     {
-        "link":"credentials.php",
+        "url":"credentials.php",
         "text":"Credentials"
     }
 ]
