@@ -1,12 +1,12 @@
 <?php
 include('../config.php');
 include('./admin-nav.php');
-print_r($response['nav']);
 session_start();
 if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
+print_r($response['nav']);
 $response['title'] = 'Users · ADMIN';
 $response['header'] = 'ADMIN Interface';
 $response['user'] = $_SESSION['username'];
