@@ -5,13 +5,9 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
+$response['title'] = 'Groups · ADMIN'
+include('../templates/header.template');
 ?>
-<!DOCTYPE html>
-<html class="h-100">
-    <head>
-        <?php readfile("../snippets/header.inc");?>
-        <title> Groups · ADMIN</title>
-    </head>
     <body class="d-flex flex-column h-100">
         <?php readfile("../snippets/admin-nav.inc");?>
         <main class="flex-fill w-75 mx-auto">
