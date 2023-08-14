@@ -6,7 +6,7 @@ $json = <<<JSON
         'text':'poop'
     }
 ]
-JSON
+JSON;
 $response['nav'] = json_decode($json);
 if(!$response['nav']){
     die('Your nav json sucks');:
