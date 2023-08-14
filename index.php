@@ -65,7 +65,7 @@ if(!isset($_SESSION['username'])){
                 </div>
             </div>
         </main>
-        <?php readfile("snippets/coptyright.inc"); ?>
+        <?php readfile("snippets/copyright.inc"); ?>
     </body>
     <?php readfile("snippets/footer.inc"); ?>
 </html>
