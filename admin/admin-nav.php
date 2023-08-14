@@ -1,3 +1,3 @@
 <?php defined('awful-pm') or die();
-$response['nav'] = json_decode("[{'link':'test.php','text':'poop'}]");
+$response['nav'] = json_decode("[{'url':'test.php','text':'poop'}]");
 ?>
