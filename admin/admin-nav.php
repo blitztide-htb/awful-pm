@@ -2,9 +2,21 @@
 $json = <<<END
 [
     {
-        "link":"test.php",
-        "text":"test"
-    }
+        "link":"users.php",
+        "text":"Users"
+    },
+    {
+        "link":"groups.php",
+        "text":"Groups"
+    },
+    {
+        "link":"vpns.php",
+        "text":"VPNs"
+    },
+    {
+        "link":"credentials.php",
+        "text":"Credentials"
+    },
 ]
 END;
 $response['nav'] = json_decode($json);
