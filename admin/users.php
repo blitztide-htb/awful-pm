@@ -9,12 +9,8 @@ if(!isset($_SESSION['username'])){
 <!DOCTYPE html>
 <html class="h-100">
     <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <?php readfile("snippets/header.inc");?>
         <title> Welcome · TTX</title>
-        <link rel="stylesheet" href="./css/admin2.css">
-        <link rel="stylesheet" href="./css/bootstrap.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
     </head>
     <body class="d-flex flex-column h-100">
         <nav class="navbar bg-dark sticky-top text-white">
