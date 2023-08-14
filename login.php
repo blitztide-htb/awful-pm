@@ -27,7 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 <html lang="en">
   <head>
   <?php readfile("snippets/header.inc");?>
-    <title>Signin · TTX</title>
+    <title>Signin · <?php print($company);?></title>
   <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">

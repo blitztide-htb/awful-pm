@@ -1,4 +1,5 @@
 <?php
+include('config.php');
 session_start();
 if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
@@ -9,7 +10,7 @@ if(!isset($_SESSION['username'])){
 <html class="h-100">
     <head>
         <?php readfile("snippets/header.inc");?>
-        <title> Welcome · TTX</title>
+        <title> Welcome · <?php print($company);?></title>
     </head>
     <body class="d-flex flex-column h-100">
         <nav class="navbar bg-primary sticky-top text-white">
