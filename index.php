@@ -59,7 +59,7 @@ if(!isset($_SESSION['username'])){
                     <h1> Connections</h1>
                     Use these OVPN files to connect to all the systems where you are authorized.
                     <ul class="list-group mt-2">
-                        <li class="list-group-item d-flex justify-content-between align-items-center">Corporate VPN <a href="./download_vpn.php?uid=1" class="btn btn-success mr-0"><i class="bi bi-download"></i>
+                        <li class="list-group-item d-flex justify-content-between align-items-center">Corporate VPN <a href="./download_vpn.php?uid=<?php print($_SESSION['uid']);?>" class="btn btn-success mr-0"><i class="bi bi-download"></i>
                         </a></li>
                     </ul>
                 </div>

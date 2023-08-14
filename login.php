@@ -10,12 +10,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   // Not found
   if(mysqli_num_rows($result) != 1) {
     http_response_code(401);
+    
     die("Unauthorized");
   }
+
+  // Get UID
+
+
   // Ensure redirection to index.php
 	header('Location: /index.php');
   $_SESSION['username'] = $_POST['username'];
 	$_SESSION['password'] = $_POST['password'];
+  $_SESSION['uid'] = 0;
 	exit();
 }
 ?>
