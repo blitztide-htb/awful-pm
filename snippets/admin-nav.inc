@@ -7,8 +7,8 @@
         <h2>Admin Interface</h2>
     </div>
     <div>
-        <a class="m-2 text-white" href="./logout.php">
-            Username <i class="bi bi-person"></i>
+        <a class="m-2 text-white" href="/logout.php">
+            ADMIN <i class="bi bi-person"></i>
         </a>
     </div>
     <div class="container">
