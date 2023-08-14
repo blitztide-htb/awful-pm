@@ -5,8 +5,8 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
-$response['title'] = 'Users · ADMIN';
-$response['header'] = 'ADMIN Interface';
+$response['title'] = 'Welcome · TTX';
+$response['header'] = 'Company Credential and Connection Manager';
 $response['user'] = $_SESSION['username'];
 $response['nav'] = array();
 include './templates/header.php';
