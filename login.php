@@ -10,7 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
   // Not found
   if(!$result) {
-    http_response_code(401)
+    http_response_code(401);
     die("Unauthorized");
   }
   
