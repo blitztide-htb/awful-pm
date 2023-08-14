@@ -1,12 +1,5 @@
 <?php
-include('config.php');
-session_start();
-if(!isset($_SESSION['username'])){
-	header('Location: /login.php');
-	exit();
-}
-include './templates/header.php';
-?>
+include '../templates/header.php';?>
 <main class="flex-shrink-0 w-75 mx-auto">
     <div class="jumbotron mt-3">
         <div class="p-5">
@@ -49,5 +42,5 @@ include './templates/header.php';
     </div>
 </main>
 <?php
-include './templates/footer.php';
+include '../templates/footer.php';
 ?>
