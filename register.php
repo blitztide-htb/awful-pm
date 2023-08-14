@@ -2,7 +2,18 @@
 include('config.php');
 session_start();
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
-      exit();
+    // Check all values exist
+    if(!isset($_POST['username']) OR !isset($_POST['password'])
+    {
+        die('Please enter all required information');
+    }
+    // Insert into SQL
+    $query = sprintf("INSERT INTO vpn_users(username,password) VALUES ('%s','%s')",$_POST['username'],$_POST['password']);
+    $mysqli->query($query);
+
+    // Redirect to login page
+    header('Location: /index.php');
+    exit();
   }
   ?>
 ?>
