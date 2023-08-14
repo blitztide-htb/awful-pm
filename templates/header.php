@@ -28,7 +28,7 @@
                 <<<END
                 <li class="nav-item"> 
                     <a class='nav-link' href='$nav->url'>
-                    $nav->text;
+                    $nav->text
                     </a>
                 </li>
                 END;
