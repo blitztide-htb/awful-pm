@@ -27,8 +27,8 @@
                 <?php foreach($response['nav'] as $nav): echo
                 <<<END
                 <li class="nav-item"> 
-                    <a class='nav-link' href='$nav["url"]'>
-                    $nav["text"];
+                    <a class='nav-link' href='$nav->url'>
+                    $nav->text;
                     </a>
                 </li>
                 END;
