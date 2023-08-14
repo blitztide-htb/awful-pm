@@ -31,6 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
+    <div class="container">
     <form class="form-signin" action="/login.php" method="POST">
   <img class="mb-4" src="./img/icons/lock.svg" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
@@ -47,6 +48,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   <p class="mt-5 mb-3 text-muted">&copy; 2023</p>
 </form>
 <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
+</div>
 </body>
 <?php readfile("snippets/footer.inc"); ?>
 </html>
