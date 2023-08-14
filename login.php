@@ -4,7 +4,7 @@ include('config.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   // Validate user/password
   $query = sprintf("SELECT id FROM vpn_users WHERE username='%s' AND password = '%s'",$_POST['username'],$_POST['password']);
-  $result = mysql_query($query);
+  $result = $mysqli->query($query);
 
   // Not found
   if(!$result) {
