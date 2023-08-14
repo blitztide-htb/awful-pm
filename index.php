@@ -5,6 +5,9 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
+$response['title'] = 'Users · ADMIN';
+$response['header'] = 'ADMIN Interface';
+$response['user'] = $_SESSION['username'];
 include './templates/header.php';
 ?>
 <main class="flex-shrink-0 w-75 mx-auto">
