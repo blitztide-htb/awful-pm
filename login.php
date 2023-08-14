@@ -31,8 +31,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   <link href="css/signin.css" rel="stylesheet">
   </head>
   <body class="text-center">
-    <div class="container">
-    <form class="form-signin" action="/login.php" method="POST">
+    <div class="container form-signin">
+    <form action="/login.php" method="POST">
   <img class="mb-4" src="./img/icons/lock.svg" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputEmail" class="sr-only">Username</label>
@@ -46,7 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   </div>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
 </form>
+<div class="m-2">
 <a href="register.php"><button class="btn btn-lg btn-primary btn-block" type="submit">Register</button></a>
+</div>
 </div>
 <?php readfile("snippets/copyright.inc"); ?>
 </body>
