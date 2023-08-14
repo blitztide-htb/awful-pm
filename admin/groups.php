@@ -6,7 +6,7 @@ if(!isset($_SESSION['username'])){
 	exit();
 }
 $response['title'] = 'Groups · ADMIN'
-include('../templates/header.template');
+include '../templates/header.template';
 ?>
     <body class="d-flex flex-column h-100">
         <?php readfile("../snippets/admin-nav.inc");?>
