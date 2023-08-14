@@ -14,6 +14,8 @@ include '../templates/header.php';?>
                     <tr>
                         <td><?=$item?></td>
                     </tr>
+                    <?php endforeach;?>
+                    <?php endforeach;?>
                 </table>
             </div>
         </div>
