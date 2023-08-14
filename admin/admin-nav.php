@@ -2,8 +2,8 @@
 $json = <<<END
 [
     {
-        'url':'test.php',
-        'text':'poop'
+        "link":"test.php",
+        "text":"test"
     }
 ]
 END;
