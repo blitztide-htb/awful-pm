@@ -2,8 +2,19 @@
 session_start();
 include('config.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+  // Ensure redirection to index.php
 	header('Location: /index.php');
-	$_SESSION['username'] = $_POST['username'];
+  // Validate user/password
+  $query = sprintf("SELECT id FROM vpn_users WHERE username='%s' AND password = '%s'",mysql_real_escape_string($_POST['username']),mysql_real_escape_string($_POST['password']));
+  $result = mysql_query($query);
+
+  // Not found
+  if(!$result) {
+    http_response_code(401)
+    die("Unauthorized");
+  }
+  
+  $_SESSION['username'] = $_POST['username'];
 	$_SESSION['password'] = $_POST['password'];
 	exit();
 }
