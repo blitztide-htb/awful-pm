@@ -9,6 +9,6 @@ $json = <<<END
 END;
 $response['nav'] = json_decode($json);
 if(!$response['nav']){
-    die('Your nav json sucks');:
+    die('Your nav json sucks');
 }
 ?>
