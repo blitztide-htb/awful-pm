@@ -6,8 +6,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   $query = sprintf("SELECT id FROM vpn_users WHERE username='%s' AND password = '%s'",$_POST['username'],$_POST['password']);
   $result = $mysqli->query($query);
 
+
   // Not found
-  if(!$result) {
+  if(mysqli_num_rows($result) != 1) {
     http_response_code(401);
     die("Unauthorized");
   }
