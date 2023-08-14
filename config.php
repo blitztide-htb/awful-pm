@@ -1,5 +1,5 @@
 <?php
-$host = 'db.adf.gov.au';
+$host = '127.0.0.1';
 $db   = 'vpn_data';
 $user = 'dbadmin';
 $pass = 'P@ssw0rd';

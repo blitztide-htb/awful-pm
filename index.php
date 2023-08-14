@@ -21,7 +21,7 @@ if(!isset($_SESSION['email'])){
             </div>
             <div>
             <a class="m-2 text-white" href="./logout.php">
-<?php print $_SESSION['email'];?><i class="bi bi-person"></i>
+<?php print $_SESSION['username'];?><i class="bi bi-person"></i>
             </a>
         </nav>
         <main class="flex-shrink-0 w-75 mx-auto">
