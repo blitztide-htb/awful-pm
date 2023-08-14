@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   <img class="mb-4" src="./img/icons/lock.svg" alt="" width="72" height="72">
   <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
   <label for="inputEmail" class="sr-only">Username</label>
-  <input type="email" name="user" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+  <input type="text" name="user" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
   <label for="inputPassword" class="sr-only">Password</label>
   <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
   <div class="checkbox mb-3">
