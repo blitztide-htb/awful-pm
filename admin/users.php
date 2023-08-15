@@ -6,6 +6,20 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
+// Get all users
+$query = sprintf("SELECT * FROM vpn_users");
+$result = $mysqli->query($query);
+
+$response['headers'] = array();
+$fields = mysqli_fetch_fields($result);
+foreach($fields as $field) {
+    array_push($response['headers'],$field['name']);
+}
+$response['rows'] = mysqli_fetch_all($result, MYSQLI_NUM);
+
+
+// Get UID
+$uid = mysqli_fetch_row($result)[0];
 $response['title'] = 'Users · ADMIN';
 $response['header'] = 'ADMIN Interface';
 $response['user'] = $_SESSION['username'];
