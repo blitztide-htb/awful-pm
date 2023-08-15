@@ -13,11 +13,11 @@ if(!$mysqli->query($query)) {
 }
 
 $response['headers'] = array();
-$fields = mysqli_fetch_fields($result);
+$fields = mysqli_fetch_fields($mysqli);
 foreach($fields as $field) {
     array_push($response['headers'],$field['name']);
 }
-$response['rows'] = mysqli_fetch_all($result, MYSQLI_NUM);
+$response['rows'] = mysqli_fetch_all($mysqli, MYSQLI_NUM);
 
 
 // Get UID
