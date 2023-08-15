@@ -9,6 +9,35 @@ $response['title'] = 'Welcome · TTX';
 $response['header'] = 'Company Credential and Connection Manager';
 $response['user'] = $_SESSION['username'];
 $response['nav'] = array();
+
+// Get all creds
+$query = sprintf("SELECT * FROM credentials");
+$result = $mysqli->query($query);
+if(!$result) {
+    die(mysqli_error($mysqli));
+}
+
+$credheaders = array();
+$fields = mysqli_fetch_fields($result);
+foreach($fields as $field) {
+    $credheaders[] = $field->name;
+}
+$creds = mysqli_fetch_all($result, MYSQLI_NUM);
+
+// Get all VPNs
+$query = sprintf("SELECT * FROM VPNs");
+$result = $mysqli->query($query);
+if(!$result) {
+    die(mysqli_error($mysqli));
+}
+
+$vpneaders = array();
+$fields = mysqli_fetch_fields($result);
+foreach($fields as $field) {
+    $vpnheaders[] = $field->name;
+}
+$vpns = mysqli_fetch_all($result, MYSQLI_NUM);
+
 include './templates/header.php';
 ?>
 <main class="flex-shrink-0 w-75 mx-auto">
@@ -25,18 +54,16 @@ include './templates/header.php';
             <h1> Credentials</h1>
             <div class="table-responsive">
                 <table class="table table-sm">
+                    <thead>
+                        <?php foreach($credheaders as $header) { echo '<th>' . $header . '</th>';} ?>
+                    </thead>
+                    <?php foreach($creds as $row): ?>
                     <tr>
-                        <th>#</th>
-                        <th>System</th>
-                        <th>Username</th>
-                        <th>Password</th>
+                    <?php foreach($row as $item): ?>
+                        <td><?=$item?></td>
+                    <?php endforeach;?>
                     </tr>
-                    <tr>
-                        <td>1</td>
-                        <td>VPN</td>
-                        <td>admin</td>
-                        <td>password</td>
-                    </tr>
+                    <?php endforeach;?>
                 </table>
             </div>
         </div>
