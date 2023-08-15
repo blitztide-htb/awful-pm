@@ -76,7 +76,7 @@ include './templates/header.php';
             <ul class="list-group mt-2">
                 <?php foreach($vpns as $vpn): ?>
                 <?php print_r($vpn);?>
-                <li class="list-group-item d-flex justify-content-between align-items-center"><?=$vpn->name?><a href="./download_vpn.php?id=<?=$vpn->id?>" class="btn btn-success mr-0"><i class="bi bi-download"></i>
+                <li class="list-group-item d-flex justify-content-between align-items-center"><?=$vpn["name"]?><a href="./download_vpn.php?id=<?=$vpn["id"]?>" class="btn btn-success mr-0"><i class="bi bi-download"></i>
                 </a></li>
                 <?php endforeach;?>
             </ul>
