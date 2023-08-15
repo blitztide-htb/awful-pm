@@ -9,6 +9,7 @@ if(!isset($_SESSION['username'])){
 $response['title'] = 'Credentials · ADMIN';
 $response['header'] = 'ADMIN Interface';
 $response['user'] = $_SESSION['username'];
+$response['table-title'] = 'Credentials';
 $response['headers'] = array('#','name');
 $response['rows'] = array(array('1','2'),array('3','4'));
 include '../templates/admin-table.php';
