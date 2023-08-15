@@ -1,9 +1,12 @@
 <?php
+if(!$response['table-title']){
+    $response['table-title'] = 'DEFAULT TEXT';
+}
 include '../templates/header.php';?>
 <main class="flex-fill w-75 mx-auto">
     <div class="container mt-5">
         <div class="card p-5">
-            <h1> Groups</h1>
+            <h1> <?php echo $response['table-title'];?></h1>
             <div class="table-responsive">
                 <table class="table table-sm">
                     <thead>
