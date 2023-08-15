@@ -15,20 +15,15 @@ if(!$result) {
 
 $response['headers'] = array();
 $fields = mysqli_fetch_fields($result);
-print_r($fields);
 foreach($fields as $field) {
     $response['headers'][] = $field->name;
 }
+
 $response['rows'] = mysqli_fetch_all($result, MYSQLI_NUM);
 
-
-// Get UID
-$uid = mysqli_fetch_row($result)[0];
 $response['title'] = 'Users · ADMIN';
 $response['header'] = 'ADMIN Interface';
 $response['user'] = $_SESSION['username'];
 $response['table-title'] = 'Users';
-#$response['headers'] = array('#','name');
-#$response['rows'] = array(array('1','2'),array('3','4'));
 include '../templates/admin-table.php';
 ?>
