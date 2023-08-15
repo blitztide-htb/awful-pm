@@ -12,7 +12,9 @@
     <nav class="navbar bg-dark sticky-top text-white">
         <div class="container">
         <div class="m-2">
-            <i class="bi bi-key"></i>
+            <a href="/admin/">
+            <i class="bi bi-gear"></i>
+            </a>
         </div>
         <div>
             <h2><?php echo htmlspecialchars($response['header']);?></h2>
