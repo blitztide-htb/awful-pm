@@ -1,5 +1,5 @@
 <?php
-if(!$response['table-title']){
+if(!array_key_exists('table-title',$response)){
     $response['table-title'] = 'DEFAULT TEXT';
 }
 include '../templates/header.php';?>
