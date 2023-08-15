@@ -4,6 +4,11 @@ if(!array_key_exists('table-title',$response)){
 }
 $response['header-theme'] = 'danger';
 include '../templates/header.php';?>
+<style>
+nav a {
+    color: white;
+}
+</style>
 <main class="flex-fill w-75 mx-auto">
     <div class="container mt-5">
         <div class="card p-5">
