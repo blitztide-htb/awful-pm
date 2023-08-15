@@ -17,7 +17,7 @@ $response['headers'] = array();
 $fields = mysqli_fetch_fields($result);
 print_r($fields);
 foreach($fields as $field) {
-    echo $field['name'];
+    print_r($field['name']);
     array_push($response['headers'],$field['name']);
 }
 $response['rows'] = mysqli_fetch_all($result, MYSQLI_NUM);
