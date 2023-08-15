@@ -8,7 +8,7 @@ if(!isset($_SESSION['username'])){
 }
 
 // Get all VPNs
-$query = sprintf("SELECT * FROM vpns");
+$query = sprintf("SELECT id,name,groupid FROM vpns");
 $result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
