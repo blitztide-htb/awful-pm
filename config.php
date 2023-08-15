@@ -1,8 +1,8 @@
 <?php
 define('awful-pm',1);
 $company = 'TTX';
-$host = '127.0.0.1';
-$db   = 'awfulpm';
+$host = '13.40.179.220';
+$db   = 'vpn_users';
 $user = 'dbadmin';
 $pass = 'P@ssw0rd';
 $charset = 'utf8mb4';
