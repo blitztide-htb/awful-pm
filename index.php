@@ -25,7 +25,7 @@ foreach($fields as $field) {
 $creds = mysqli_fetch_all($result, MYSQLI_NUM);
 
 // Get all VPNs
-$query = sprintf("SELECT * FROM VPNs");
+$query = sprintf("SELECT * FROM vpns");
 $result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
