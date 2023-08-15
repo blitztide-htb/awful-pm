@@ -8,7 +8,7 @@ if(!isset($_SESSION['username'])){
 }
 // Get all users
 $query = sprintf("SELECT * FROM users");
-$result = $mysqli->query($query)
+$result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
 }
