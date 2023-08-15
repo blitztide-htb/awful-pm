@@ -9,7 +9,7 @@ if(!isset($_SESSION['username'])){
 // Get all users
 $query = sprintf("SELECT * FROM vpn_users");
 if(!$mysqli->query($query)) {
-    die("ERROR IN SQL");
+    die(mysqli_error($mysqli));
 }
 
 $response['headers'] = array();
