@@ -8,16 +8,17 @@ if(!isset($_SESSION['username'])){
 }
 // Get all users
 $query = sprintf("SELECT * FROM users");
-if(!$mysqli->query($query)) {
+$result = $mysqli->query($query)
+if(!$result) {
     die(mysqli_error($mysqli));
 }
 
 $response['headers'] = array();
-$fields = mysqli_fetch_fields($mysqli);
+$fields = mysqli_fetch_fields($result);
 foreach($fields as $field) {
     array_push($response['headers'],$field['name']);
 }
-$response['rows'] = mysqli_fetch_all($mysqli, MYSQLI_NUM);
+$response['rows'] = mysqli_fetch_all($result, MYSQLI_NUM);
 
 
 // Get UID
