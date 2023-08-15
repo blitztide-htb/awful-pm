@@ -1,3 +1,8 @@
+<?php
+if(!array_key_exists('header-theme',$response)){
+    $response['header-theme'] = 'dark';
+}
+?>
 <!DOCTYPE html>
 <html class="h-100">
     <head>
@@ -9,7 +14,7 @@
         <title> <?php echo htmlspecialchars($response['title']);?></title>
     </head>
     <body class="d-flex flex-column h-100">
-    <nav class="navbar bg-dark sticky-top text-white">
+    <nav class="navbar bg-<?php echo htmlspecialchars($response['header-theme']);?> sticky-top text-white">
         <div class="container">
         <div class="m-2">
             <a href="/admin/">

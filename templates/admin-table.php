@@ -2,6 +2,7 @@
 if(!array_key_exists('table-title',$response)){
     $response['table-title'] = 'DEFAULT TEXT';
 }
+$response['header-theme'] = 'danger';
 include '../templates/header.php';?>
 <main class="flex-fill w-75 mx-auto">
     <div class="container mt-5">
