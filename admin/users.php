@@ -27,7 +27,7 @@ $response['title'] = 'Users · ADMIN';
 $response['header'] = 'ADMIN Interface';
 $response['user'] = $_SESSION['username'];
 $response['table-title'] = 'Users';
-$response['headers'] = array('#','name');
-$response['rows'] = array(array('1','2'),array('3','4'));
+#$response['headers'] = array('#','name');
+#$response['rows'] = array(array('1','2'),array('3','4'));
 include '../templates/admin-table.php';
 ?>
