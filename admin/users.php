@@ -15,6 +15,7 @@ if(!$result) {
 
 $response['headers'] = array();
 $fields = mysqli_fetch_fields($result);
+print_r($fields);
 foreach($fields as $field) {
     array_push($response['headers'],$field['name']);
 }
