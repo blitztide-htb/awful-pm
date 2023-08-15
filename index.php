@@ -36,7 +36,7 @@ $fields = mysqli_fetch_fields($result);
 foreach($fields as $field) {
     $vpnheaders[] = $field->name;
 }
-$vpns = mysqli_fetch_all($result, MYSQLI_NUM);
+$vpns = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 include './templates/header.php';
 ?>
