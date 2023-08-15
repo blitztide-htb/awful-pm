@@ -31,7 +31,7 @@ if(!$result) {
     die(mysqli_error($mysqli));
 }
 
-$vpneaders = array();
+$vpnheaders = array();
 $fields = mysqli_fetch_fields($result);
 foreach($fields as $field) {
     $vpnheaders[] = $field->name;
