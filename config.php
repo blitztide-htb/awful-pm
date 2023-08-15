@@ -2,7 +2,7 @@
 define('awful-pm',1);
 $company = 'TTX';
 $host = '13.40.179.220';
-$db   = 'vpn_users';
+$db   = 'vpn_data';
 $user = 'dbadmin';
 $pass = 'P@ssw0rd';
 $charset = 'utf8mb4';
