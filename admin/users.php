@@ -7,7 +7,7 @@ if(!isset($_SESSION['username'])){
 	exit();
 }
 // Get all users
-$query = sprintf("SELECT * FROM users");
+$query = sprintf("SELECT * FROM vpn_users");
 $result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
