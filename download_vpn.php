@@ -5,7 +5,7 @@ if(!isset($_SESSION['username'])){
 	header('Location: /login.php');
 	exit();
 }
-  $query = sprintf("SELECT ovpn_file FROM vpn_users WHERE id='%s'",$_GET['uid']);
+  $query = sprintf("SELECT config FROM vpns WHERE id='%s'",$_GET['id']);
   $qresult = $mysqli->query($query);
   $results = mysqli_fetch_row($qresult);
   if(!$results[0]){
