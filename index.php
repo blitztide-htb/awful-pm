@@ -11,7 +11,7 @@ $response['user'] = $_SESSION['username'];
 $response['nav'] = array();
 
 // Get all creds
-$query = sprintf("SELECT * FROM credentials");
+$query = sprintf("SELECT * FROM credentials WHERE groupid IN (SELECT groupid FROM memberships WHERE userid=%s)", $_SESSION["uid"]);
 $result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
@@ -25,7 +25,7 @@ foreach($fields as $field) {
 $creds = mysqli_fetch_all($result, MYSQLI_NUM);
 
 // Get all VPNs
-$query = sprintf("SELECT * FROM vpns");
+$query = sprintf("SELECT * FROM vpns WHERE groupid IN (SELECT groupid FROM memberships WHERE userid=%s);",$_SESSION["uid"]);
 $result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
