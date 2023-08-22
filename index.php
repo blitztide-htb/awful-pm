@@ -11,7 +11,7 @@ $response['user'] = $_SESSION['username'];
 $response['nav'] = array();
 
 // Get all creds
-$query = sprintf("SELECT * FROM credentials WHERE groupid IN (SELECT groupid FROM memberships WHERE userid=%s)", $_SESSION["uid"]);
+$query = sprintf("SELECT username,password,system FROM credentials WHERE groupid IN (SELECT groupid FROM memberships WHERE userid=%s)", $_SESSION["uid"]);
 $result = $mysqli->query($query);
 if(!$result) {
     die(mysqli_error($mysqli));
