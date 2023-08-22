@@ -14,6 +14,7 @@ $query = sprintf("SELECT config FROM vpns WHERE id='%s'",$_GET['id']);
 $qresult = $mysqli->query($query);
 $results = mysqli_fetch_row($qresult);
 if(!$results[0]){
+  http_response_code(404);
   die("NO VPN FILE FOUND");
 }
 header("Content-Type: text/plain");
