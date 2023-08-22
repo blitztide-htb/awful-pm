@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
 
     // Add user to default group
     $query = sprintf("INSERT INTO memberships(userid,groupid) VALUES ((SELECT id from vpn_users WHERE username = '%s'),(SELECT id FROM groups WHERE name='default'))",$_POST['username']);
-
+    $mysqli->query($query);
     // Redirect to login page
     header('Location: /index.php');
     exit();
